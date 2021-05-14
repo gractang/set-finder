@@ -1,7 +1,6 @@
 import cv2
 import reference as ref
 import numpy as np
-# card dimensions: 2.25 x 3.5
 
 
 # returns whether or not the three cards are a set
@@ -59,7 +58,7 @@ def get_vals(dict):
 
 def run():
     shapes = ref.load_shapes("shape/")
-    image = cv2.imread("reference/black.jpg")
+    image = cv2.imread("test/IMG_0517.JPG")
     imgs, names, output = ref.isolate(image, shapes)
     num_cards = len(imgs)
     #print(num_cards)

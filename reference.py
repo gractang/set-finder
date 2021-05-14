@@ -2,6 +2,9 @@ import cv2
 import numpy as np
 import os
 
+
+# card dimensions: 2.25 x 3.5 in
+
 WAIT_TIME = 1500
 
 SHAPES = ["0__0", "0__1", "0__2", "1__0", "1__1", "1__2", "2__0", "2__1", "2__2"]
@@ -239,7 +242,7 @@ def isolate(img, shapes):
     for cnt in contours:
         area = cv2.contourArea(cnt)
         if area > CARD_MIN_AREA:
-            cv2.drawContours(img_contour, cnt, -1, (0, 0, 255), 5)
+            cv2.drawContours(img_contour, cnt, -1, (0, 0, 255), 10)
             peri = cv2.arcLength(cnt, True)
             # print(peri)
             approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
