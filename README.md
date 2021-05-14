@@ -55,6 +55,5 @@ Whether or not the Sets are detected, and whether those Sets are legitimate.
 Take a lot of pictures of boards, then run them through the program. 
 
 ## TODO
-- edge of card recognition
-- pattern recognition
+- fill
 - potential followup: making an iOS app that uses phone camera to provide input.
